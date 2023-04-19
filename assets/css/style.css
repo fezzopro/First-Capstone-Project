@@ -134,15 +134,23 @@ body {
 
 .speakers {
   display: flex;
-  flex-direction: column;
   gap: 1rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .speaker {
   display: flex;
   gap: 1rem;
   margin: 1rem 10%;
+  flex: 50;
+}
+
+.speaker:hover {
+  transform: scale(1.015);
+  transform-origin: 1%;
+  transition-duration: 0.2s;
+  box-shadow: 0 4px 8px 0 rgb(168 167 167 / 56%), 0 6px 20px 0 rgb(255 255 255 / 19%);
 }
 
 .more-speaker {
@@ -466,5 +474,9 @@ header {
 
   .campaign {
     margin-right: 5%;
+  }
+
+  .speakers {
+    flex-direction: column;
   }
 }
