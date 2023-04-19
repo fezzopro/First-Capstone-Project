@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
   mobilePopUpMenue.style.height = `${introduction.clientHeight}px`;
   mobilePopUpMenue.style.transition = 'all 1s ease-in-out 0s';
 
-
   const createLeftavBar = () => {
     navlinks.forEach((li) => {
       if (!mobilePopUpMenue.classList.contains('hide')) {
@@ -41,6 +40,89 @@ document.addEventListener('DOMContentLoaded', ()=>{
     link.addEventListener('click', toggleMobileMenu);
   });
   
+  const speakers = [
+    {
+      name: 'Yochai Bankler',
+      image: 'assets/img/guests/speaker-1.png',
+      job: 'Professor of Entrepreneurial Legal Studies at Harvard Law School',
+      experience: 'Benkler studies commons-based peer production, and pushed his seminal book The Welth of Networks in 2006.',
+    },
+    {
+      name: 'Yochai Bankler',
+      image: 'assets/img/guests/speaker-2.png',
+      job: 'Professor of Entrepreneurial Legal Studies at Harvard Law School',
+      experience: 'Benkler studies commons-based peer production, and pushed his seminal book The Welth of Networks in 2006.',
+    },
+    {
+      name: 'Yochai Bankler',
+      image: 'assets/img/guests/speaker-3.png',
+      job: 'Professor of Entrepreneurial Legal Studies at Harvard Law School',
+      experience: 'Benkler studies commons-based peer production, and pushed his seminal book The Welth of Networks in 2006.',
+    },
+    {
+      name: 'Yochai Bankler',
+      image: 'assets/img/guests/speaker-4.png',
+      job: 'Professor of Entrepreneurial Legal Studies at Harvard Law School',
+      experience: 'Benkler studies commons-based peer production, and pushed his seminal book The Welth of Networks in 2006.',
+    },
+    {
+      name: 'Yochai Bankler',
+      image: 'assets/img/guests/speaker-5.png',
+      job: 'Professor of Entrepreneurial Legal Studies at Harvard Law School',
+      experience: 'Benkler studies commons-based peer production, and pushed his seminal book The Welth of Networks in 2006.',
+    },
+    {
+      name: 'Yochai Bankler',
+      image: 'assets/img/guests/speaker-6.png',
+      job: 'Professor of Entrepreneurial Legal Studies at Harvard Law School',
+      experience: 'Benkler studies commons-based peer production, and pushed his seminal book The Welth of Networks in 2006.',
+    },
+  ];
+
   // Create guests/speaker
-  const createSpeaker = () => {};
-});
+  const moreSpeaker = document.querySelector('.more-speaker');
+  const speakersDiv = document.querySelector('.speakers');
+  const createSpeaker = (speaker) => {
+
+    const newSpeaker = document.createElement('div');
+    const newSpeakerImage = document.createElement('div');
+    const newSpeakerimg = document.createElement('img');
+    const newSpeakerDescriptions = document.createElement('div');
+    const newSpeakerDescriptionsH2 = document.createElement('h2');
+    const newSpeakerDescriptionsSpan1 = document.createElement('span');
+    const newSpeakerDescriptionsSpan2 = document.createElement('span');
+    const newSpeakerDescriptionsSpan3 = document.createElement('span');
+
+    // Add classes
+    newSpeaker.className = 'speaker';
+    newSpeakerImage.className = 'speaker-image';
+    // newSpeakerimg.alt = 'Speaker';
+    newSpeakerDescriptions.className = 'speaker-description';
+    newSpeakerDescriptionsH2.className = 'name';
+    newSpeakerDescriptionsSpan1.className = 'job-title';
+    newSpeakerDescriptionsSpan2.className = 'line';
+    newSpeakerDescriptionsSpan3.className = 'experience';
+
+    // Assign values
+    newSpeakerimg.src = `${speaker.image}`;
+    console.log(speaker.image);
+    newSpeakerDescriptionsH2.textContent = speaker.name;
+    newSpeakerDescriptionsSpan1.textContent = speaker.job;
+    newSpeakerDescriptionsSpan3.textContent = speaker.experience;
+
+    // Construct a speaker div
+    newSpeakerDescriptions.appendChild(newSpeakerDescriptionsH2);
+    newSpeakerDescriptions.appendChild(newSpeakerDescriptionsSpan1);
+    newSpeakerDescriptions.appendChild(newSpeakerDescriptionsSpan2);
+    newSpeakerDescriptions.appendChild(newSpeakerDescriptionsSpan3);
+    newSpeakerImage.appendChild(newSpeakerimg);
+    newSpeaker.appendChild(newSpeakerImage);
+    newSpeaker.appendChild(newSpeakerDescriptions);
+
+    return newSpeaker;
+  };
+
+  speakers.forEach((speaker) => {
+    moreSpeaker.insertAdjacentElement('beforebegin', createSpeaker(speaker));
+  });
+})
