@@ -94,7 +94,7 @@ This project uses the following stacks:
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - **[Live Demo Link](https://fezzopro.github.io/First-Capstone-Project/)**
-- **[Video Presentation](https://www.loom.com/share/f6c2b31e838c415c92c9f5e559725a45)**
+- **[Video Presentation](https://www.loom.com/share/757206bdd0c8444c8ab75e76f2728c32)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
