@@ -82,8 +82,10 @@ This project uses the following stacks:
 
 ### Key Features <a name="key-features"></a>
 
-- **[home page (For Mobile)]**
-- **[about page (For Mobile)]**
+- **[home page (For Mobile & Desktop)]**
+- **[about page (For Mobile & Desktop)]**
+- **[Mobile popup menu]**
+- **[Dynamic Content using JS]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,7 +93,8 @@ This project uses the following stacks:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- No Demo Yet
+- **[Live Demo Link](https://fezzopro.github.io/First-Capstone-Project/)**
+- **[Video Presentation](https://www.loom.com/share/757206bdd0c8444c8ab75e76f2728c32)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,7 +125,7 @@ Example commands:
   cd my-folder
   git clone https://github.com/fezzopro/First-Capstone-Project.git
   cd First-Capstone-Project
-  git checkout main
+  git checkout feature-milestone-2-mobile-first
 
 ```
 
@@ -166,10 +169,9 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Home Page (For Desktop)]**
-- [ ] **[About Page (For Desktop)]**
-- [ ] **[User Interactions (link, mobile menu)]**
-- [ ] **[Dynamic Featured speakers Section]**
+- [ ] **[Project page]**
+- [ ] **[Service page]**
+- [ ] **[Archieve Page]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,8 +198,12 @@ If you like this project please give it a star ⭐️ to encourage the Author
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+
+ - The designer of this wireframe **[Cindy Shin in Behance](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)**
  - I would like to thank Microverse Team & Students
- - The designer of this tepmlate **[Cindy Shin in Behance](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)**
+ - Thanks to the Code Reviewer(s) for the insightful feedbacks.
+- My great appreciation goes to My coding partner(s), morning session team, and standup team for their contributions & collaboration.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -205,6 +211,6 @@ If you like this project please give it a star ⭐️ to encourage the Author
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
