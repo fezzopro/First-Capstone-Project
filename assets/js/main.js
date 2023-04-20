@@ -3,15 +3,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const mainContent = document.querySelector('.main');
   const mobilePopUpMenue = document.createElement('div');
   const mobileMenuUl = document.createElement('ul');
+  const mobileMenuUlLi = document.createElement('li');
   const navlinks = document.querySelectorAll('.nav-div ul li');
   const sections = document.querySelectorAll('section');
   const headerNav = document.querySelectorAll('.nav');
-  const mobileMenulinks = document.querySelectorAll('.nav-link');
   mobilePopUpMenue.className = 'left-navigation mobile-menu hide';
   const introduction = document.querySelector('.introduction');
   mobilePopUpMenue.style.height = `${introduction.clientHeight}px`;
   mobilePopUpMenue.style.transition = 'all 1s ease-in-out 0s';
-
+  
   const createLeftavBar = () => {
     navlinks.forEach((li) => {
       if (!mobilePopUpMenue.classList.contains('hide')) {
@@ -24,6 +24,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
   mobilePopUpMenue.appendChild(mobileMenuUl);
   mainContent.appendChild(mobilePopUpMenue);
   
+  const addEventListerToLinks = () => {
+    const mobileMenulinks = document.querySelectorAll('.mobile-menu > ul > li > a');
+    console.log(mobileMenulinks);
+    mobileMenulinks.forEach((link) => {
+      link.addEventListener('click', toggleMobileMenu);
+    });
+  };
+
   const toggleMobileMenu = () => {
     createLeftavBar();
     mobilePopUpMenue.classList.toggle('hide');
@@ -33,12 +41,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
     sections[0].classList.toggle('left-navigation-backgound');
     sections[0].classList.toggle('hide');
+    addEventListerToLinks();
   };
-
+  
   humbergerMenu.addEventListener('click', toggleMobileMenu);
-  mobileMenulinks.forEach((link) => {
-    link.addEventListener('click', toggleMobileMenu);
-  });
+  
   
   const speakers = [
     {
@@ -81,7 +88,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   // Create guests/speaker
   const moreSpeaker = document.querySelector('.more-speaker');
-  const speakersDiv = document.querySelector('.speakers');
   const createSpeaker = (speaker) => {
 
     const newSpeaker = document.createElement('div');
@@ -105,7 +111,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     // Assign values
     newSpeakerimg.src = `${speaker.image}`;
-    console.log(speaker.image);
     newSpeakerDescriptionsH2.textContent = speaker.name;
     newSpeakerDescriptionsSpan1.textContent = speaker.job;
     newSpeakerDescriptionsSpan3.textContent = speaker.experience;
@@ -125,4 +130,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
   speakers.forEach((speaker) => {
     moreSpeaker.insertAdjacentElement('beforebegin', createSpeaker(speaker));
   });
-})
+});
