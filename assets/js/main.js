@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add classes
     newSpeaker.className = 'speaker';
     newSpeakerImage.className = 'speaker-image';
-    // newSpeakerimg.alt = 'Speaker';
+    newSpeakerimg.alt = 'Speaker\'s photo';
     newSpeakerDescriptions.className = 'speaker-description';
     newSpeakerDescriptionsH2.className = 'name';
     newSpeakerDescriptionsSpan1.className = 'job-title';
