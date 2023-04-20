@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const moreSpeaker = document.querySelector('.more-speaker');
 
   const createSpeaker = (speaker) => {
-
     const newSpeaker = document.createElement('div');
     const newSpeakerImage = document.createElement('div');
     const newSpeakerimg = document.createElement('img');
