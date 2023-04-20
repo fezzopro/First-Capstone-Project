@@ -1,9 +1,8 @@
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
   const humbergerMenu = document.querySelector('.burger img');
   const mainContent = document.querySelector('.main');
   const mobilePopUpMenue = document.createElement('div');
   const mobileMenuUl = document.createElement('ul');
-  const mobileMenuUlLi = document.createElement('li');
   const navlinks = document.querySelectorAll('.nav-div ul li');
   const sections = document.querySelectorAll('section');
   const headerNav = document.querySelectorAll('.nav');
@@ -11,11 +10,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const introduction = document.querySelector('.introduction');
   mobilePopUpMenue.style.height = `${introduction.clientHeight}px`;
   mobilePopUpMenue.style.transition = 'all 1s ease-in-out 0s';
-  
+
   const createLeftavBar = () => {
     navlinks.forEach((li) => {
       if (!mobilePopUpMenue.classList.contains('hide')) {
-        headerNav[0].appendChild(li)
+        headerNav[0].appendChild(li);
       } else {
         mobileMenuUl.appendChild(li);
       }
@@ -24,14 +23,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
   mobilePopUpMenue.appendChild(mobileMenuUl);
   mainContent.appendChild(mobilePopUpMenue);
   
-  const addEventListerToLinks = () => {
-    const mobileMenulinks = document.querySelectorAll('.mobile-menu > ul > li > a');
-    console.log(mobileMenulinks);
-    mobileMenulinks.forEach((link) => {
-      link.addEventListener('click', toggleMobileMenu);
-    });
-  };
-
   const toggleMobileMenu = () => {
     createLeftavBar();
     mobilePopUpMenue.classList.toggle('hide');
@@ -43,10 +34,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
     sections[0].classList.toggle('hide');
     addEventListerToLinks();
   };
-  
+
+  const addEventListerToLinks = () => {
+    const mobileMenulinks = document.querySelectorAll('.mobile-menu > ul > li > a');
+    mobileMenulinks.forEach((link) => {
+      link.addEventListener('click', toggleMobileMenu);
+    });
+  };
+
   humbergerMenu.addEventListener('click', toggleMobileMenu);
-  
-  
+
   const speakers = [
     {
       name: 'Yochai Bankler',
@@ -88,6 +85,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   // Create guests/speaker
   const moreSpeaker = document.querySelector('.more-speaker');
+
   const createSpeaker = (speaker) => {
 
     const newSpeaker = document.createElement('div');
