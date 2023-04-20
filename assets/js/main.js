@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   mobilePopUpMenue.appendChild(mobileMenuUl);
   mainContent.appendChild(mobilePopUpMenue);
-  
+
   const toggleMobileMenu = () => {
     createLeftavBar();
     mobilePopUpMenue.classList.toggle('hide');
@@ -32,10 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     sections[0].classList.toggle('left-navigation-backgound');
     sections[0].classList.toggle('hide');
-    addEventListerToLinks();
-  };
-
-  const addEventListerToLinks = () => {
     const mobileMenulinks = document.querySelectorAll('.mobile-menu > ul > li > a');
     mobileMenulinks.forEach((link) => {
       link.addEventListener('click', toggleMobileMenu);
