@@ -494,7 +494,8 @@ header {
   }
 
   .card span {
-    width: 45%;
+    min-width: 20%;
+    font-size: 1rem;
   }
 
   .more-card-desktop {
@@ -565,6 +566,10 @@ header {
 
   .speakers {
     padding-bottom: 5%;
+  }
+
+  .card-p {
+    width: 90%;
   }
 }
 
