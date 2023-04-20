@@ -146,6 +146,12 @@ body {
   flex: 50;
 }
 
+.nav-link:focus,
+.nav-link:hover,
+.nav-link:active {
+  color: #ec5242;
+}
+
 .speaker:hover {
   transform: scale(1.015);
   transform-origin: 1%;
@@ -277,8 +283,10 @@ header {
   padding: 5%;
 }
 
-.more-card-desktop > span {
+.more-card-desktop > a {
   border-bottom: 2px solid;
+  text-decoration: none;
+  color: #d3d3d3;
 }
 
 .partners {
@@ -399,10 +407,11 @@ header {
     padding: 5%;
   }
 
-  .more-card-mobile span {
+  .more-card-mobile a {
     background-color: #ff4f38;
     color: #f5f8fa;
     padding: 5%;
+    text-decoration: none;
   }
 
   .nav-div {
