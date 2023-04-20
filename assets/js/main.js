@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navlinks = document.querySelectorAll('.nav-div ul li');
   const sections = document.querySelectorAll('section');
   const headerNav = document.querySelectorAll('.nav');
+  const footer = document.querySelector('footer');
   mobilePopUpMenue.className = 'left-navigation mobile-menu hide';
   const introduction = document.querySelector('.introduction');
   mobilePopUpMenue.style.height = `${introduction.clientHeight}px`;
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleMobileMenu = () => {
     createLeftavBar();
     mobilePopUpMenue.classList.toggle('hide');
+    footer.classList.toggle('hide');
     humbergerMenu.classList.toggle('close-icon');
     sections.forEach((section) => {
       section.classList.toggle('hide');
@@ -120,7 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
     return newSpeaker;
   };
 
-  speakers.forEach((speaker) => {
-    moreSpeaker.insertAdjacentElement('beforebegin', createSpeaker(speaker));
-  });
+  if (moreSpeaker) {
+    speakers.forEach((speaker) => {
+      moreSpeaker.insertAdjacentElement('beforebegin', createSpeaker(speaker));
+    });
+  }
 });
